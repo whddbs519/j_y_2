@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width" , initial-scale="1">
+	<title>꼬마의 전자일기</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jstyle.css">
+</head>
+
+<body>
+
+</style>
+
+<nav class="navbar navbar-default"> <!-- defalut : 밝음, inverse : 어두움 -->
+	<div class="container-fluid">   <!-- 화면꽉채움 -->
+		<div class="navbar-header">
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <!-- 무슨내용인지 모르는데 내브바의 버튼을 만들때 사용함 -->	
+			<span class="sr-only"></span> <!-- sr-only 스킵 네비게이션-->
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span> <!--햄버거 모양 줄 3개-->
+			</button>
+			<a class="navbar-brand" href="jhindex.html">꼬마의 전자일기</a> <!-- navbar-brand를 통해 메뉴의 상표를 만들어줌 맨왼쪽에 있는게 navbar-brand이고 그  옆에  메뉴로 나타나는게 navbar-nav임-->
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-nabar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="jhindex.html">메인<span class="sr-only"></span></a></li>  <!--메인이라는 내브바의 눌러진 모습의 메뉴를 만들어-->
+				<li><a href="arduino.html">아두이노</a></li>
+				<li><a href="circuit.html">회로실험</a></li>
+				<!--
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"  role = "button" aria-haspopup="true" aria-expanded="false">코딩<span class="caret"></span></a>	을 누르면 밑에 드랍다운 메뉴가 생기는 것을 모바일에도 적용
+				<ul class="dropdown-menu">
+					<li><a href="#">아두이노</a></li> 코딩을 
+					누르면 나오는 또다른 메뉴
+				</ul>
+			-->
+				</li>
+			</ul>
+			
+
+			<ul class="nav navbar-nav navbar-right"> <!--내브바의 맨 오른쪽에 드랍다운을 만들려고함-->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle = "dropdown" role="button" aria-haspopup="true" aria-expanded="false">그외 여러가지<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.naver.com">네이버</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<h1 class="title1">1.자료형이란?</h1>
+	<p class="title1-content">:유효한 데이터 크기와 여러 종류의 데이터(정수,실수,문자)등을 식별 가능하게 구분</p>
+	<h1 class="title2">2.자료형의 종류</h1>
+	<p class="title2-content">
+		-논리형 : Boolean (참과 거짓)<hr>
+		-정수형 : int (1,2,3 ..)<hr>
+		-문자형 : char (a,b,c ..)<hr>
+		-실수형 : double ( 1.2 ,3.5 ..)
+	</p>
+	<h1 class="title3">3.변수</h1>
+	<p class="title3-content">:프로그램에서 데이터 값들을 일시적으로 저장하는 공간을 말한다.</p>
+	<h1 class="title4">4.변수 선언 방법</h1>
+	<p class="title3-content">:자료형 변수명 = 해당값 <br>
+		변수명은 자신이 지정해주는 이름<br>
+		아래의 코드 두개는 서로 같은 코드를 두가지 방식으로 표현한 방법
+	 </p>
+	<pre  class="pre-scrollable">
+	#include &lt;studio.h&gt;
+
+	int buttonState;
+	buttonState = 20;
+
+    int buttonState = 20;
+			</pre>
+<h1 class="title5">5.상수</h1>
+	<p class="title5-content">: 데이터 값이 변하지 않는 고정된 값 ( 예시 : pi = 3.141592….)<br>변수의 선언 방법과 같으나 앞에 const라는 단어를 붙여줌</p>
+	<pre  class="pre-scrollable">
+	#include &lt;studio.h&gt;
+
+	const int pi = 3.141592;
+			</pre>
+	<h1 class="title6">6.자주 사용되는 추가적인 함수</h1>
+	<p class="title6-content">pinMode(핀번호,입력(or출력)) <br>digitalWrite(핀번호,상태)</p>
+	<pre  class="pre-scrollable">
+	#include &lt;studio.h&gt;
+
+	pinMode(13,OUTPUT);  //13번 핀을 출력으로 사용하겠다.
+	digitalWrite(13,HIGH);	//13번핀을 HIHG(5V)상태로 만들겠다.
+			</pre>
+	<h1 class="title7">7.실습</h1>
+	<p class="title7-content">위의 자료를 토대로 13번핀을 출력으로 해서 LED가 1초 주기로 켜졌다 꺼졌다를 반복하는 코드작성하기, 이때 시리얼 통신을 통해 led on , led off도 알아볼 수 있게 작성하기</p>
+<p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button" data-target="#modal" data-toggle="modal"> 
+				정답보기!</a></p>
+
+
+
+
+
+
+
+
+</div>
+<!--footer-->
+	<footer style="background-color: white ; color:black ">
+		<div class="container">
+			<br>
+			<div class="col-sm-2" style="text-align: center;"><h5>Copyright &copy;2018</h5><h5>신종윤</h5></div>
+			<div class="col-sm-2"><h4 style="text-align: center;">SNS</h4>
+				<div class="list-group">
+					<a href="https://www.facebook.com/profile.php?id=100003788895313" class="list-group-item">FACEBOOK</a>
+					<a href="https://www.instagram.com/jng_y_2/" class="list-group-item">Instagram</a>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+<!--footer-->
+<div class="modal" id="modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="text-align: center;">
+					정답
+					<button class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<pre  class="pre-scrollable">
+	#include &lt;studio.h&gt;
+int LED = 13;
+void setup() {
+  Serial.begin(9600);
+  pinMode(13,OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13,HIGH);
+  Serial.print("LED ON");
+  delay(1000);
+  digitalWrite(13,LOW);
+  Serial.print("LED OFF");
+  delay(1000);
+  
+}
+	
+			</pre>
+
+
+
+				</div>
+
+			</div>
+		</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>

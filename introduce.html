@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width" , initial-scale="1">
+	<title>꼬마의 전자일기</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jstyle.css">
+</head>
+
+<body>
+
+</style>
+
+<nav class="navbar navbar-default"> <!-- defalut : 밝음, inverse : 어두움 -->
+	<div class="container-fluid">   <!-- 화면꽉채움 -->
+		<div class="navbar-header">
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <!-- 무슨내용인지 모르는데 내브바의 버튼을 만들때 사용함 -->	
+			<span class="sr-only"></span> <!-- sr-only 스킵 네비게이션-->
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span> <!--햄버거 모양 줄 3개-->
+			</button>
+			<a class="navbar-brand" href="jhindex.html">꼬마의 전자일기</a> <!-- navbar-brand를 통해 메뉴의 상표를 만들어줌 맨왼쪽에 있는게 navbar-brand이고 그  옆에  메뉴로 나타나는게 navbar-nav임-->
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-nabar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="jhindex.html">메인<span class="sr-only"></span></a></li>  <!--메인이라는 내브바의 눌러진 모습의 메뉴를 만들어-->
+				<li><a href="arduino.html">아두이노</a></li>
+				<li><a href="circuit.html">회로실험</a></li>
+				<!--
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"  role = "button" aria-haspopup="true" aria-expanded="false">코딩<span class="caret"></span></a>	을 누르면 밑에 드랍다운 메뉴가 생기는 것을 모바일에도 적용
+				<ul class="dropdown-menu">
+					<li><a href="#">아두이노</a></li> 코딩을 
+					누르면 나오는 또다른 메뉴
+				</ul>
+			-->
+				</li>
+			</ul>
+			
+
+			<ul class="nav navbar-nav navbar-right"> <!--내브바의 맨 오른쪽에 드랍다운을 만들려고함-->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle = "dropdown" role="button" aria-haspopup="true" aria-expanded="false">그외 여러가지<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.naver.com">네이버</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!--나 자신 소개_-->
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="pannel panel-primary">
+				<div class="pannel-heading">
+					<h3 class="pannel-title"><span class="glyphicon glyphicon-tags">꼬마소개</span></h3> 
+				</div>
+				<div class="pannel-body">
+					<div class="media">
+						<div class="media-left">
+							<a href="#"><img class="media-object" src="images/profile.png"></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">신종윤</h4>
+							안녕하세요.현재는 국민대학교 나노전자물리학과에 재학중이며 취미로는 코딩을 좋아합니다. 또한 패션에도 많은 관심을 가지고 있습니다.
+						</div>
+					</div>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>학력</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr>
+						 	<td>2014</td>
+						 	<td>진광중학교 졸업</td>
+						 	
+						 </tr>
+						 <tr>
+						 	<td>2017</td>
+						 	<td>진광고등학교 졸업</td>
+						 	
+						 </tr>
+						 <tr>
+						 	<td>2017</td>
+						 	<td>국민대학교 나노전자물리학과 입학</td>
+						 </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--footer-->
+	<footer style="background-color: white ; color:black ">
+		<div class="container">
+			<br>
+			<div class="col-sm-2" style="text-align: center;"><h5>Copyright &copy;2018</h5><h5>신종윤</h5></div>
+			<div class="col-sm-2"><h4 style="text-align: center;">SNS</h4>
+				<div class="list-group">
+					<a href="https://www.facebook.com/profile.php?id=100003788895313" class="list-group-item">FACEBOOK</a>
+					<a href="https://www.instagram.com/jng_y_2/" class="list-group-item">Instagram</a>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+<!--footer-->
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>

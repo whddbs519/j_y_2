@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width" , initial-scale="1">
+	<title>꼬마의 전자일기</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jstyle.css">
+</head>
+
+<body>
+
+</style>
+
+<nav class="navbar navbar-default"> <!-- defalut : 밝음, inverse : 어두움 -->
+	<div class="container-fluid">   <!-- 화면꽉채움 -->
+		<div class="navbar-header">
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <!-- 무슨내용인지 모르는데 내브바의 버튼을 만들때 사용함 -->	
+			<span class="sr-only"></span> <!-- sr-only 스킵 네비게이션-->
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span> <!--햄버거 모양 줄 3개-->
+			</button>
+			<a class="navbar-brand" href="jhindex.html">꼬마의 전자일기</a> <!-- navbar-brand를 통해 메뉴의 상표를 만들어줌 맨왼쪽에 있는게 navbar-brand이고 그  옆에  메뉴로 나타나는게 navbar-nav임-->
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-nabar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="jhindex.html">메인<span class="sr-only"></span></a></li>  <!--메인이라는 내브바의 눌러진 모습의 메뉴를 만들어-->
+				<li><a href="arduino.html">아두이노</a></li>
+				<li><a href="circuit.html">회로실험</a></li>
+				<!--
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"  role = "button" aria-haspopup="true" aria-expanded="false">코딩<span class="caret"></span></a>	을 누르면 밑에 드랍다운 메뉴가 생기는 것을 모바일에도 적용
+				<ul class="dropdown-menu">
+					<li><a href="#">아두이노</a></li> 코딩을 
+					누르면 나오는 또다른 메뉴
+				</ul>
+			-->
+				</li>
+			</ul>
+			
+
+			<ul class="nav navbar-nav navbar-right"> <!--내브바의 맨 오른쪽에 드랍다운을 만들려고함-->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle = "dropdown" role="button" aria-haspopup="true" aria-expanded="false">그외 여러가지<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.naver.com">네이버</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container">
+	<h1 class="title">아두이노란?</h1>
+	<p class="title-content">아두이노는 소형의 컴퓨터라 생각하면 쉽다. 비전공자들도 쉽게 코딩을 하고 제품을 만들기 위해 만들어진 마이크로컨트롤러이다. 아두이노의 종류에는 UNO, LEONARDO, MEGA….의 종류가 있으며 대중적으로 많이 사용하는 것은 아두이노 UNO 이다. </p>
+	<div class="media">
+		<div class="media-left">
+			<img class="media-header" src="images/arduino_lecture.png">
+		</div>
+		<div class="media-body">
+			<p class="media-content"> </p>
+		</div>
+	</div>
+	<h1 class="title2">통합모듈환경</h1>
+	<p class="title2-content">아두이노와 컴퓨터를 연결해주는 연결고리 역활으로써, 우리가 실질적인 코딩을 하는 곳이라 생각!</p>
+	<a href="https://www.arduino.cc/en/Main/Software ">아두이노 설치</a>
+		<div class="media">
+			<div class="media-header">
+				<img class="module_iamge" src="images/module.png"><hr>
+				<img class="module_iamge1" src="images/module_content1.png"><p>:인간이 쓴 언어를 컴퓨터 자체적으로 해석</p>
+				<img class="module_iamge1" src="images/module_content2.png"><p>:인간이 쓴 언어를 컴퓨터가 아두이노로 전달하는 버튼</p>
+				<img class="module_iamge1" src="images/module_content3.png"><p>:컴퓨터와 아두이노 간의 대화창 , 아두이노한테 명령을 할 때 이 시리얼 모니터로 할 수도 있고 아두이노의 진행상황도 볼 수 있음</p>
+			</div>
+		</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--footer-->
+	<footer style="background-color: white ; color:black ">
+		<div class="container">
+			<br>
+			<div class="col-sm-2" style="text-align: center;"><h5>Copyright &copy;2018</h5><h5>신종윤</h5></div>
+			<div class="col-sm-2"><h4 style="text-align: center;">SNS</h4>
+				<div class="list-group">
+					<a href="https://www.facebook.com/profile.php?id=100003788895313" class="list-group-item">FACEBOOK</a>
+					<a href="https://www.instagram.com/jng_y_2/" class="list-group-item">Instagram</a>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+<!--footer-->
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>

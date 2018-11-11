@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width" , initial-scale="1">
+	<title>꼬마의 전자일기</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jstyle.css">
+	
+</head>
+
+<body>
+<style type="text/css">
+	.jumbotron{
+		background-color: white;
+		background-image: url();
+		background-size: cover;
+		text-shadow: white;
+		color: black;	
+	} 
+</style>
+
+<nav class="navbar navbar-default"> <!-- defalut : 밝음, inverse : 어두움 -->
+	<div class="container-fluid">   <!-- 화면꽉채움 -->
+		<div class="navbar-header">
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <!-- 무슨내용인지 모르는데 내브바의 버튼을 만들때 사용함 -->	
+			<span class="sr-only"></span> <!-- sr-only 스킵 네비게이션-->
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span> <!--햄버거 모양 줄 3개-->
+			</button>
+			<a class="navbar-brand" href="jhindex.html">꼬마의 전자일기</a> <!-- navbar-brand를 통해 메뉴의 상표를 만들어줌 맨왼쪽에 있는게 navbar-brand이고 그  옆에  메뉴로 나타나는게 navbar-nav임-->
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-nabar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="jhindex.html">메인<span class="sr-only"></span></a></li>  <!--메인이라는 내브바의 눌러진 모습의 메뉴를 만들어-->
+				<li><a href="introduce.html">꼬마소개</a></li>
+				<li><a href="arduino.html">아두이노</a></li>
+				<li><a href="circuit.html">회로실험</a></li>
+				<!--
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"  role = "button" aria-haspopup="true" aria-expanded="false">코딩<span class="caret"></span></a>	을 누르면 밑에 드랍다운 메뉴가 생기는 것을 모바일에도 적용
+				<ul class="dropdown-menu">
+					<li><a href="#">아두이노</a></li> 코딩을 
+					누르면 나오는 또다른 메뉴
+				</ul>
+			-->
+				</li>
+			</ul>
+			
+
+			<ul class="nav navbar-nav navbar-right"> <!--내브바의 맨 오른쪽에 드랍다운을 만들려고함-->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle = "dropdown" role="button" aria-haspopup="true" aria-expanded="false">그외 여러가지<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.naver.com">네이버</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+	<div class="container">
+
+		<div class="jumbotron">	
+			<h1 class="text-center">꼬마의 전자일기를 소개합니다</h1>
+			<p class="text-center">취미로 코딩과 회로를 좋아합니다.</p>
+			<p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button" data-target="#modal" data-toggle="modal"> <!--modal함수를 통해 버튼을 누르면 팝업창이 뜨게 하기-->
+				꼬마의 전자일기로 들어가기!
+			</a></p>
+		</div>
+
+
+
+		<hr> <!--선긋기-->
+		<!--강의목록-->
+		<div class="pannel panel-primary">
+			<div class="pannel-heading">
+				<h3 class="pannel-title"><span class="glyphicon glyphicon-pencil"></span>&nbsp;강의 목록</h3> <!--판넬 만들기-->
+			</div>
+			<div class="pannel-body">
+				<div class="media">
+					<div class="media-left">
+						<a href="arduino.html"><img class="media-object" src="images/arduino.png" alt="Arduino"></a> <!--아두이노 사진들어가는부분-->
+					</div>
+					<div class="media-body">
+						<h4 class="media-heda"><a href="arduino.html">아두이노 강의</a>&nbsp;<span class="badge">New</span></h4>
+						기초적인 코드에 대한 설명과 이를 통한 실습으로 구성되어 있습니다.
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<hr>
+<!--footer-->
+	<footer style="background-color: white ; color:black ">
+		<div class="container">
+			<br>
+			<div class="col-sm-4" style="text-align: center;"><h5>Copyright &copy;2018</h5><h5>신종윤</h5></div>
+			<div class="col-sm-4"><h4 style="text-align: center;">SNS</h4>
+				<div class="list-group">
+					<a href="https://www.facebook.com/profile.php?id=100003788895313" class="list-group-item">FACEBOOK</a>
+					<a href="https://www.instagram.com/jng_y_2/" class="list-group-item">Instagram</a>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+<!--footer-->
+<!--modal-->
+	<div class="modal" id="modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			
+				<div class="modal-header" style="text-align: center;">
+					전자일기
+					<button class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body" style="text-align: center;">
+					1. 아두이노의 Serial통신을 통해 1을 누르면 LED가 점등되는 회로 구현하기 <br>
+					2. 아두이노의 조도센서를 통해 빛의 양에 따른 LED점등 살펴보기<br>
+					3. OrCad 기본 사용법에 대해 살펴보기<br>
+					4. OrCad PsPice시뮬레이션을 통해 여러가지 회로 구현하기<br>
+					<img src="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>

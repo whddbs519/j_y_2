@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width" , initial-scale="1">
+	<title>꼬마의 전자일기</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jstyle.css">
+</head>
+
+<body>
+
+</style>
+
+<nav class="navbar navbar-default"> <!-- defalut : 밝음, inverse : 어두움 -->
+	<div class="container-fluid">   <!-- 화면꽉채움 -->
+		<div class="navbar-header">
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <!-- 무슨내용인지 모르는데 내브바의 버튼을 만들때 사용함 -->	
+			<span class="sr-only"></span> <!-- sr-only 스킵 네비게이션-->
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span> <!--햄버거 모양 줄 3개-->
+			</button>
+			<a class="navbar-brand" href="jhindex.html">꼬마의 전자일기</a> <!-- navbar-brand를 통해 메뉴의 상표를 만들어줌 맨왼쪽에 있는게 navbar-brand이고 그  옆에  메뉴로 나타나는게 navbar-nav임-->
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-nabar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="jhindex.html">메인<span class="sr-only"></span></a></li>  <!--메인이라는 내브바의 눌러진 모습의 메뉴를 만들어-->
+				<li><a href="arduino.html">아두이노</a></li>
+				<li><a href="circuit.html">회로실험</a></li>
+				<!--
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"  role = "button" aria-haspopup="true" aria-expanded="false">코딩<span class="caret"></span></a>	을 누르면 밑에 드랍다운 메뉴가 생기는 것을 모바일에도 적용
+				<ul class="dropdown-menu">
+					<li><a href="#">아두이노</a></li> 코딩을 
+					누르면 나오는 또다른 메뉴
+				</ul>
+			-->
+				</li>
+			</ul>
+			
+
+			<ul class="nav navbar-nav navbar-right"> <!--내브바의 맨 오른쪽에 드랍다운을 만들려고함-->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle = "dropdown" role="button" aria-haspopup="true" aria-expanded="false">그외 여러가지<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.naver.com">네이버</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<h1 class="title1">1.시리얼 통신이란?</h1>
+	<p class="title1-content">시리얼 통신은 아두이노와 컴퓨터간의 통신을 뜻한다. 여기서 시리얼 통신은 직렬 통신을 말하는 뜻이다. 예를 들어 101102 와 같은 데이터를 PC를 통해 아두이노로 보낼 때 101102의 데이터가 한번에 다 같이 통신되지 않고 1  0  1  1 … 과 같이 하나의 데이터씩 통신을 하게 된다. 이때 사용하는 것이 시리얼 모니터이다. 아래의 그림에서 빨간색으로 네모 표시가 된 곳이 시리얼 모니터로 들어가는 버튼이다.</p>
+	<img src="images/Serial_monitor.png">
+<h1 class="title2">2.시리얼 모니터</h1>
+<p class="title2-content">시리얼 모니터는 아두이노와 PC간의 대화창이라고 생각하면 쉽다. 시리얼 모니터를 통해 아두이노와 대화(명령)를 할 수 있으며 아두이노의 진행상황도 쉽게 볼 수 있다. 또한 시리얼 모니터를 통해 디버깅도 할 수 있다. ( 디버깅 : 버그를 잡는 행위 ) 시리얼 통신을 할 때 아두이노의 디지털핀 0번핀과 1번핀은 사용할 수 없다.</p>
+<h1 class="title3">3.시리얼 통신 함수</h1>
+<p class="title3-content">
+		①	Serial.begin( 통신속도 );
+	: 시리얼 통신을 시작하겠다는 의미이다. ()에는 통신 속도가 들어간다.  
+	Serial.begin(9600); //9600의 속도로 시리얼 통신을 시작하겠다.
+<hr>
+②	Serial.print(“출력값”);
+:”출력값”을 시리얼 모니터를 통해 출력하겠다.                                          
+ Serial.print(“hello”); //hello라는 출력값을 시리얼 모니터에 출력하겠다.                 
+ Serial.println(“world”); //println함수는 ln이 붙어지면서 줄 바꿈이 일어남.
+ <pre  class="pre-scrollable">
+	#include &lt;studio.h&gt;
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  Serial.print("hello world");
+}
+			</pre>
+<hr>
+③	Serial.available();
+:시리얼 통신으로 수신된, 읽지 않은 상태의 데이터수를 반환한다. (남아 있지 않으면 0)
+<hr>
+④	Serial.read();
+:시리얼 통신 수신 버퍼에서 첫번째 문자를 읽어 반환하다. 수신 버퍼가 비어 있으면 -1을 반환한다. 
+ Serial.println(Serial.read());
+
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+<!--footer-->
+	<footer style="background-color: white ; color:black ">
+		<div class="container">
+			<br>
+			<div class="col-sm-2" style="text-align: center;"><h5>Copyright &copy;2018</h5><h5>신종윤</h5></div>
+			<div class="col-sm-2"><h4 style="text-align: center;">SNS</h4>
+				<div class="list-group">
+					<a href="https://www.facebook.com/profile.php?id=100003788895313" class="list-group-item">FACEBOOK</a>
+					<a href="https://www.instagram.com/jng_y_2/" class="list-group-item">Instagram</a>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+<!--footer-->
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>
