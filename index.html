@@ -7,10 +7,18 @@
 	<title>꼬마의 전자일기</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/jstyle.css">
+	
 </head>
 
 <body>
-
+<style type="text/css">
+	.jumbotron{
+		background-color: white;
+		background-image: url();
+		background-size: cover;
+		text-shadow: white;
+		color: black;	
+	} 
 </style>
 
 <nav class="navbar navbar-default"> <!-- defalut : 밝음, inverse : 어두움 -->
@@ -28,6 +36,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-nabar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="index.html">메인<span class="sr-only"></span></a></li>  <!--메인이라는 내브바의 눌러진 모습의 메뉴를 만들어-->
+				<li><a href="introduce.html">꼬마소개</a></li>
 				<li><a href="arduino.html">아두이노</a></li>
 				<li><a href="circuit.html">회로실험</a></li>
 				<!--
@@ -53,66 +62,45 @@
 		</div>
 	</div>
 </nav>
+	<div class="container">
 
-<div class="container">
-	<h1 class="title1">1.자료형이란?</h1>
-	<p class="title1-content">:유효한 데이터 크기와 여러 종류의 데이터(정수,실수,문자)등을 식별 가능하게 구분</p>
-	<h1 class="title2">2.자료형의 종류</h1>
-	<p class="title2-content">
-		-논리형 : Boolean (참과 거짓)<hr>
-		-정수형 : int (1,2,3 ..)<hr>
-		-문자형 : char (a,b,c ..)<hr>
-		-실수형 : double ( 1.2 ,3.5 ..)
-	</p>
-	<h1 class="title3">3.변수</h1>
-	<p class="title3-content">:프로그램에서 데이터 값들을 일시적으로 저장하는 공간을 말한다.</p>
-	<h1 class="title4">4.변수 선언 방법</h1>
-	<p class="title3-content">:자료형 변수명 = 해당값 <br>
-		변수명은 자신이 지정해주는 이름<br>
-		아래의 코드 두개는 서로 같은 코드를 두가지 방식으로 표현한 방법
-	 </p>
-	<pre  class="pre-scrollable">
-	#include &lt;studio.h&gt;
-
-	int buttonState;
-	buttonState = 20;
-
-    int buttonState = 20;
-			</pre>
-<h1 class="title5">5.상수</h1>
-	<p class="title5-content">: 데이터 값이 변하지 않는 고정된 값 ( 예시 : pi = 3.141592….)<br>변수의 선언 방법과 같으나 앞에 const라는 단어를 붙여줌</p>
-	<pre  class="pre-scrollable">
-	#include &lt;studio.h&gt;
-
-	const int pi = 3.141592;
-			</pre>
-	<h1 class="title6">6.자주 사용되는 추가적인 함수</h1>
-	<p class="title6-content">pinMode(핀번호,입력(or출력)) <br>digitalWrite(핀번호,상태)</p>
-	<pre  class="pre-scrollable">
-	#include &lt;studio.h&gt;
-
-	pinMode(13,OUTPUT);  //13번 핀을 출력으로 사용하겠다.
-	digitalWrite(13,HIGH);	//13번핀을 HIHG(5V)상태로 만들겠다.
-			</pre>
-	<h1 class="title7">7.실습</h1>
-	<p class="title7-content">위의 자료를 토대로 13번핀을 출력으로 해서 LED가 1초 주기로 켜졌다 꺼졌다를 반복하는 코드작성하기, 이때 시리얼 통신을 통해 led on , led off도 알아볼 수 있게 작성하기</p>
-<p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button" data-target="#modal" data-toggle="modal"> 
-				정답보기!</a></p>
+		<div class="jumbotron">	
+			<h1 class="text-center">꼬마의 전자일기를 소개합니다</h1>
+			<p class="text-center">취미로 코딩과 회로를 좋아합니다.</p>
+			<p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button" data-target="#modal" data-toggle="modal"> <!--modal함수를 통해 버튼을 누르면 팝업창이 뜨게 하기-->
+				꼬마의 전자일기로 들어가기!
+			</a></p>
+		</div>
 
 
 
+		<hr> <!--선긋기-->
+		<!--강의목록-->
+		<div class="pannel panel-primary">
+			<div class="pannel-heading">
+				<h3 class="pannel-title"><span class="glyphicon glyphicon-pencil"></span>&nbsp;강의 목록</h3> <!--판넬 만들기-->
+			</div>
+			<div class="pannel-body">
+				<div class="media">
+					<div class="media-left">
+						<a href="arduino.html"><img class="media-object" src="images/arduino.png" alt="Arduino"></a> <!--아두이노 사진들어가는부분-->
+					</div>
+					<div class="media-body">
+						<h4 class="media-heda"><a href="arduino.html">아두이노 강의</a>&nbsp;<span class="badge">New</span></h4>
+						기초적인 코드에 대한 설명과 이를 통한 실습으로 구성되어 있습니다.
+					</div>
+				</div>
+			</div>
+		</div>
 
-
-
-
-
-</div>
+	</div>
+	<hr>
 <!--footer-->
 	<footer style="background-color: white ; color:black ">
 		<div class="container">
 			<br>
-			<div class="col-sm-2" style="text-align: center;"><h5>Copyright &copy;2018</h5><h5>신종윤</h5></div>
-			<div class="col-sm-2"><h4 style="text-align: center;">SNS</h4>
+			<div class="col-sm-4" style="text-align: center;"><h5>Copyright &copy;2018</h5><h5>신종윤</h5></div>
+			<div class="col-sm-4"><h4 style="text-align: center;">SNS</h4>
 				<div class="list-group">
 					<a href="https://www.facebook.com/profile.php?id=100003788895313" class="list-group-item">FACEBOOK</a>
 					<a href="https://www.instagram.com/jng_y_2/" class="list-group-item">Instagram</a>
@@ -122,41 +110,28 @@
 		</div>
 	</footer>
 <!--footer-->
-<div class="modal" id="modal" tabindex="-1">
+<!--modal-->
+	<div class="modal" id="modal" tabindex="-1">
 		<div class="modal-dialog">
 			<div class="modal-content">
+			
 				<div class="modal-header" style="text-align: center;">
-					정답
+					전자일기
 					<button class="close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="modal-body">
-					<pre  class="pre-scrollable">
-	#include &lt;studio.h&gt;
-int LED = 13;
-void setup() {
-  Serial.begin(9600);
-  pinMode(13,OUTPUT);
-}
 
-void loop() {
-  digitalWrite(13,HIGH);
-  Serial.print("LED ON");
-  delay(1000);
-  digitalWrite(13,LOW);
-  Serial.print("LED OFF");
-  delay(1000);
-  
-}
-	
-			</pre>
-
-
-
+				<div class="modal-body" style="text-align: center;">
+					1. 아두이노의 Serial통신을 통해 1을 누르면 LED가 점등되는 회로 구현하기 <br>
+					2. 아두이노의 조도센서를 통해 빛의 양에 따른 LED점등 살펴보기<br>
+					3. OrCad 기본 사용법에 대해 살펴보기<br>
+					4. OrCad PsPice시뮬레이션을 통해 여러가지 회로 구현하기<br>
+					<img src="">
 				</div>
-
 			</div>
 		</div>
-</div>
+	</div>
+
+
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 
